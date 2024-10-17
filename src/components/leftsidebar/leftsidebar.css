@@ -17,7 +17,7 @@
 
 }
  .menu img{
-    max-height: 20px;
+    max-height: 30px;
     opacity: 0.6;
     cursor: pointer;
 }
@@ -76,4 +76,37 @@
 }
 .friends:hover span{
     color: white;
+}
+
+.ls .menu{
+    position: relative;
+    padding: 10px 0px;
+}
+.sub-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 170px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.sub-menu hr{
+    border: none;
+    height: 1px;
+    background: #a4a4a4;
+    margin: 8px 0px;
+}
+.sub-menu p{
+    font-size: 20px;
+}
+.menu .sub-menu{
+    display: none;
+}
+
+
+.menu:hover .sub-menu{
+    display: block;
 }

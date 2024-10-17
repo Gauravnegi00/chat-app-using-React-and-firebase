@@ -9,7 +9,12 @@ const Leftsidebar = () => {
         <div className="ls-nav">
           <img src={assets.logo} alt="logo" />
           <div className="menu">
-            <img src={assets.menu_icon} alt="" />
+            <img src={assets.menu_icon} alt="menu"  className="menu-img"/>
+            <div className="sub-menu">
+              <p>Edit Profile</p>
+              <hr />
+              <p>Logout</p>
+            </div>
           </div>
         </div>
         <div className="ls-search">
