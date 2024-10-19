@@ -3,7 +3,7 @@
     background: #001030;
     position: relative;
     height: 100vh;
-    width: 22vw;
+    width: 20vw;
     overflow-y: scroll;
 }
 .rs-profile{
@@ -17,7 +17,7 @@
     justify-content: center;
 }
 .rs-profile img{
-    width:130px;
+    width:120px;
     aspect-ratio: 1/1;
     border-radius: 50%;
 
@@ -42,6 +42,7 @@
 .hr{
     border-color: #ffffff50;
     margin: 20px 10px;
+    /* width:600px; */
 
 }
 .rs-media{
@@ -50,15 +51,15 @@
 }
 .rs-media  div{
     max-height: 280px;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 3px;
+    gap: 6px;
     margin-top: 8px;
 }
 .rs-media div img{
     margin-top: 15px;
-    width: 90px;
+    width: 85px;
     border-radius: 4px;
     cursor: pointer;
 }

@@ -1,5 +1,5 @@
 .side-nav {
-    width: 87px;
+    width: 70px;
     height: 100vh;
     background-color: #020c1f; /* Set nav background to black */
     padding: 10px;
@@ -25,8 +25,8 @@
   }
   
 .nav-items img {
-    width: 30px; /* Increase icon size */
-    height: 30px; /* Ensure the height matches */
+    width: 28px; /* Increase icon size */
+    height: 28px; /* Ensure the height matches */
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s;

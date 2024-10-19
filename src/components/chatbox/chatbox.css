@@ -2,7 +2,7 @@
     height: 100vh;
     position: relative;
     background-color: #e0dada;
-    width: 50vw;
+    width: 56vw;
 }
 .chat-user{
     padding: 10px 15px;
@@ -12,17 +12,17 @@
     border-bottom: 2px solid #9a9494;
 }
 .chat-user img{
-    width: 25px;
+    width: 22px;
     border-radius: 50%;
 }
 .chat-user img:first-child{
-    width: 58px;
+    width: 50px;
     aspect-ratio: 1/1;
 }
 
 .chat-user p{
     flex: 1;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 500;
     color: #393939;
     display: flex;
@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    height:60px;
+    height:50px;
     padding: 10px 15px;
     background: white;
     position: absolute;
@@ -45,7 +45,7 @@
 }
 
 .chat-input img{
-    width: 35px;
+    width: 28px;
     cursor: pointer;
 }
 
@@ -60,7 +60,7 @@
     flex: 1;
     border: none;
     outline: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .chat-msg{
@@ -95,7 +95,7 @@
     background-color: #077eff;
     padding: 8px;
     max-width: 400px;
-    font-size:20px ;
+    font-size:17px ;
     font-weight: 300;
     border-radius: 8px 8px 0px 8px;
     margin-bottom: 30px;

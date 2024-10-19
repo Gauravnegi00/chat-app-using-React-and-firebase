@@ -2,7 +2,7 @@
     background: #001030;
     color: white;
     height: 100vh;
-    width: 23vw;
+    width: 20vw;
 }
 .ls-top{
     padding: 20px;
@@ -13,11 +13,11 @@
     align-items: center;
 }
 .ls-nav img{
-    max-width: 120px;
+    max-width: 110px;
 
 }
  .menu img{
-    max-height: 30px;
+    max-height: 25px;
     opacity: 0.6;
     cursor: pointer;
 }
@@ -30,7 +30,7 @@
     margin-top: 20px;
 }
 .ls-search img{
-    width: 20px;
+    width: 15px;
 }
 .ls-search input{
     background:transparent;
@@ -46,12 +46,12 @@
 .ls-list{
     display: flex;
     flex-direction: column;
-    height:85%;
+    height:80%;
     overflow-y: scroll;
 
 }
  .friends img{
-    width: 55px;
+    width: 45px;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
@@ -61,7 +61,7 @@
     gap: 10px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 15px;
 }
 .friends div{
     display: flex;
@@ -69,7 +69,7 @@
 }
 .friends span{
     color: #9f9f9f;
-    font-size: 13px;
+    font-size: 11px;
 } 
 .friends:hover{
     background-color: #077Eff;
