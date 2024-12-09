@@ -1,85 +1,91 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react'
-import './login.css';
-import assets from '../../assets/assets';
-
-// Import signup and login from firebase.js ⬇️
-import { signup, login } from '../../config/firebase';
+import React, { useState } from "react";
+import "./login.css";
+import { signup , login} from "../../config/FIrebase";
 
 const Login = () => {
-    const [currentstate, setcurrentstate] = useState("Sign Up");
+  const [currentState, setCurrentState] = useState("Sign Up");
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    // Create state variables to store username, email, and password
-    const [userName, setUserName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
 
-    const onsubmitHandler = (event) => {
-        event.preventDefault();
-        if (currentstate === "Sign Up") {
-            signup(userName, email, password);
-        } else {
-            login(email, password);
-        }
-    };
+    if (currentState === "Sign Up") {
+      signup(userName, email, password);
+      // alert("Account created successfully!");  
+    }else{
+      login(email,password);
+    }
+  };
 
-    return (
-        <div className='login'>
-            <img src={assets.logo_big} alt="logo" />
-            <form onSubmit={onsubmitHandler} className='login-form'>
-                <h2>{currentstate}</h2>
-                {currentstate === "Sign Up" && (
-                    <input
-                        onChange={(e) => setUserName(e.target.value)}
-                        value={userName}
-                        type='text'
-                        placeholder='Username'
-                        className='form-input'
-                        required
-                    />
-                )}
-                <input
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    type='email'
-                    placeholder='Email Address'
-                    className='form-input'
-                    required
-                />
-                <input
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                    type='password'
-                    placeholder='Password'
-                    className='form-input'
-                    required
-                />
+  return (
+    <div className="login">
+      <form onSubmit={onSubmitHandler} className="login-form">
+        <h2>{currentState}</h2>
 
-                <button type='submit'>
-                    {currentstate === "Sign Up" ? "Create account" : "Login now"}
-                </button>
+       
+        {currentState === "Sign Up" && (
+          <input
+            type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            name="username"
+            placeholder="Username"
+            className="form-input"
+            required
+          />
+        )}
 
-                <div className='login-term'>
-                    <input type="checkbox" />
-                    <p>Agree to the terms of use and privacy policy.</p>
-                </div>
+        
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          placeholder="Email Address"
+          className="form-input"
+          required
+        />
 
-                <div className="login-frogot">
-                    {currentstate === "Sign Up" ? (
-                        <p className="login-toggel">
-                            Already have an account?{" "}
-                            <span onClick={() => setcurrentstate("Log In")}>Click here</span>
-                        </p>
-                    ) : (
-                        <p className="login-toggel">
-                            Need an account?{" "}
-                            <span onClick={() => setcurrentstate("Sign Up")}>Click here</span>
-                        </p>
-                    )}
-                </div>
-            </form>
+       
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          name="password"
+          placeholder="Password"
+          className="form-input"
+          required
+        />
+
+        <button type="submit">
+          {currentState === "Sign Up" ? "Create Account" : "Login Now"}
+        </button>
+
+        <div className="login-term">
+          <input type="checkbox" required />
+          <p>Agree to the terms of use and privacy policy.</p>
         </div>
-    );
+
+        
+        <div className="login-toggle">
+          {currentState === "Sign Up" ? (
+            <p>
+              Already have an account?{" "}
+              <span onClick={() => setCurrentState("Login")}>Click here</span>
+            </p>
+          ) : (
+            <p>
+              Don&apos;t have an account?{" "}
+              <span onClick={() => setCurrentState("Sign Up")}>Click here</span>
+            </p>
+          )}
+        </div>
+      </form>
+    </div>
+  );
 };
 
 export default Login;

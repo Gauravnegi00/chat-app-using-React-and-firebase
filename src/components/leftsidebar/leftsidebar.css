@@ -1,61 +1,71 @@
-.ls{
+/* Left Sidebar Styles */
+.ls {
     background: #001030;
     color: white;
     height: 100vh;
     width: 20vw;
 }
-.ls-top{
+
+.ls-top {
     padding: 20px;
 }
-.ls-nav{
+
+.ls-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.ls-nav img{
-    max-width: 110px;
 
+.ls-nav img {
+    max-width: 110px;
 }
- .menu img{
+
+.menu img {
     max-height: 25px;
     opacity: 0.6;
     cursor: pointer;
 }
 
-.ls-search{
+.ls-search {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 12px;
     margin-top: 20px;
 }
-.ls-search img{
+
+.ls-search img {
     width: 15px;
 }
-.ls-search input{
-    background:transparent;
-    border:none;
+
+.ls-search input {
+    background: transparent;
+    border: none;
     outline: none;
-    color:white;
+    color: white;
     font-size: 15px;
 }
-.ls-search input::placeholder{
+
+.ls-search input::placeholder {
     color: #c8c8c8;
 }
 
-.ls-list{
+.ls-list {
     display: flex;
     flex-direction: column;
-    height:80%;
+    height: 80%;
     overflow-y: scroll;
-
 }
- .friends img{
+
+/* Friend's profile image */
+.friends img {
     width: 45px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    transition: border 0.3s ease; /* Smooth transition for the border */
 }
- .friends{
+
+.friends {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -63,26 +73,47 @@
     cursor: pointer;
     font-size: 15px;
 }
-.friends div{
+
+/* Styling for friend's text */
+.friends div {
     display: flex;
     flex-direction: column;
 }
-.friends span{
+
+.friends span {
     color: #9f9f9f;
     font-size: 11px;
-} 
-.friends:hover{
-    background-color: #077Eff;
 }
-.friends:hover span{
+
+.friends:hover {
+    background-color: #077eff;
+}
+
+.friends:hover span {
     color: white;
 }
 
-.ls .menu{
+.friends.unseen {
+    border-left: 4px solid #66bb6a; 
+}
+
+.friends.unseen img {
+    border: 2px solid #30c237; 
+}
+
+
+.friends.unseen span {
+    font-weight: bold;
+    color: #47d04e; 
+    transition: color 0.3s ease; 
+}
+
+.ls .menu {
     position: relative;
     padding: 10px 0px;
 }
-.sub-menu{
+
+.sub-menu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -93,20 +124,27 @@
     color: black;
     cursor: pointer;
 }
-.sub-menu hr{
+
+.sub-menu hr {
     border: none;
     height: 1px;
     background: #a4a4a4;
     margin: 8px 0px;
 }
-.sub-menu p{
+
+.sub-menu p {
     font-size: 20px;
 }
-.menu .sub-menu{
+
+.menu .sub-menu {
     display: none;
 }
 
-
-.menu:hover .sub-menu{
+.menu:hover .sub-menu {
     display: block;
+}
+
+.msg-aaya {
+    font-size: 2rem;
+    color: #333;
 }
