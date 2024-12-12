@@ -7,6 +7,7 @@ import { arrayUnion, collection, doc, getDoc, getDocs, query, serverTimestamp, s
 import { db } from "../../config/FIrebase";
 import { AppContext } from "../../context/AppContext";
 import { toast } from "react-toastify";
+import { logout } from '../../config/FIrebase'
 
 const Leftsidebar = () => {
   const navigate = useNavigate();
@@ -142,7 +143,7 @@ const Leftsidebar = () => {
             <div className="sub-menu">
               <p onClick={() => navigate("/update")}>Edit Profile</p>
               <hr />
-              <p>Logout</p>
+              <p onClick={()=>logout()}>Logout</p>
             </div>
           </div>
         </div>
